@@ -12,6 +12,5 @@ export class HeroSectionComponent {
   constructor(public router: Router) {}
   goToProductPage() {
     this.router.navigateByUrl('/products');
-    console.log('clicked');
   }
 }
