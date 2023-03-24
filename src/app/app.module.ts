@@ -8,13 +8,15 @@ import { MaterialModule } from './shared/material.module';
 import { HeaderComponent } from './shared/ui-material/header/header.component';
 import { FooterComponent } from './shared/ui-material/footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomePageComponent
+    HomePageComponent,
+    HeroSectionComponent
   ],
   imports: [
     BrowserModule,
