@@ -5,26 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
-import { HeaderComponent } from './shared/ui-material/header/header.component';
-import { FooterComponent } from './shared/ui-material/footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { FeatureSectionComponent } from './feature-section/feature-section.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { ProductsComponent } from './products/products.component';
+import { SharedModule } from './shared/shared-module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     HomePageComponent,
-    FeatureSectionComponent
+    HeroSectionComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
