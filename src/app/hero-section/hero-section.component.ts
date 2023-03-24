@@ -10,7 +10,7 @@ export class HeroSectionComponent {
   title = 'Experience the Future of Technology Today!';
 
   constructor(public router: Router) {}
-  btnClick() {
+  goToProductPage() {
     this.router.navigateByUrl('/products');
     console.log('clicked');
   }
