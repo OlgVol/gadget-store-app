@@ -1,0 +1,26 @@
+mat-icon {
+  width: 58.8px;
+  height: 41.4px;
+  top: 9.6px;
+  text-align: center;
+}
+mat-card {
+  width: 30%;
+  background-color: #F5E48B;
+  margin: 40px;
+}
+.feature-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+h1 {
+  text-align: center;
+  align-items: center;
+  margin-top: 25px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+}
