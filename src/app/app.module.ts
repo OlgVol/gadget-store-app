@@ -9,6 +9,7 @@ import { HeaderComponent } from './shared/ui-material/header/header.component';
 import { FooterComponent } from './shared/ui-material/footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
     HeaderComponent,
     FooterComponent,
     HomePageComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

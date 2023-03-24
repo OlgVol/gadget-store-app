@@ -1,11 +1,26 @@
 <mat-grid-list cols="2">
   <mat-grid-tile class="content">
-    <h1>Experience the Future of Technology Today!</h1>
-    <p>Unleash your inner tech enthusiast with pur wide range of gadgets. Becom a pro expert within a moment.</p>
-  <button mat-button>CONTACT US</button>
-  <button mat-button>SHOP NOW</button>
+    <div class="hero-content">
+      <div class="grid-content">
+        <h1>{{ title | titlecase }}</h1>
+        <p>
+          Unleash your inner tech enthusiast with pur wide range of gadgets.
+          Becom a pro expert within a moment.
+        </p>
+      </div>
+      <div class="grid-buttons"></div>
+      <button class="contact-us" mat-button routerLink="">CONTACT US</button>
+      <button
+        class="shop-now"
+        mat-button
+        routerLink="/products"
+        (click)="btnClick()"
+      >
+        SHOP NOW
+      </button>
+    </div>
   </mat-grid-tile>
   <mat-grid-tile class="hero-image">
-
+    <img src="../../assets/images/hero image.png" />
   </mat-grid-tile>
 </mat-grid-list>

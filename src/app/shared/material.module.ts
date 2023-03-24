@@ -21,11 +21,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-<<<<<<< HEAD
-    MatGridListModule
-=======
-    CommonModule
->>>>>>> fd9ca8705de595adcada35ecc7ec9f062cdb3715
+    MatGridListModule,
+    CommonModule,
   ]
 })
 export class MaterialModule { }
