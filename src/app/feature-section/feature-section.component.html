@@ -1,33 +1,10 @@
 <h1>{{ title | titlecase }}</h1>
 <div class="feature-content">
-  <mat-card class="wifi">
-    <mat-icon><img src="../../assets/images/wifi.png"></mat-icon>
-    <mat-card-title>Wireless Freedom</mat-card-title>
+  <mat-card *ngFor="let card of cards" class="wifi">
+    <mat-icon><img [src]=card.imgUrl></mat-icon>
+    <mat-card-title>{{card.title}}</mat-card-title>
     <mat-card-content>
-      <p>wireless gadget that provide freedom of movement while using them</p>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="stay-connect">
-    <mat-icon>
-      <img src="../../assets/images/smart-device.png">
-    </mat-icon>
-    <mat-card-title>Stay Connect</mat-card-title>
-    <mat-card-content>
-      <p>
-        gadget that help people stay connected with their loved ones and
-        colleagues
-      </p>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="smart-home">
-    <mat-icon><img src="../../assets/images/smart-home.png">
-      </mat-icon>
-    <mat-card-title>Smart Home</mat-card-title>
-    <mat-card-content>
-      <p>
-        gadget that make your home smarter and more efficient at the space of
-        your own home
-      </p>
+      <p>{{card.content}}</p>
     </mat-card-content>
   </mat-card>
 </div>
