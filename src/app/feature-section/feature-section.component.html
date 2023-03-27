@@ -1,0 +1,10 @@
+<h1>{{ title | titlecase }}</h1>
+<div class="feature-content">
+  <mat-card *ngFor="let card of cards">
+    <mat-icon><img [src]=card.imgUrl></mat-icon>
+    <mat-card-title>{{card.title}}</mat-card-title>
+    <mat-card-content>
+      <p>{{card.content}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

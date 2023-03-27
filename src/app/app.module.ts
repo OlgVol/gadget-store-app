@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ProductsComponent } from './products/products.component';
 import { SharedModule } from './shared/shared-module';
+import { FeatureSectionComponent } from './feature-section/feature-section.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SharedModule } from './shared/shared-module';
     HomePageComponent,
     HeroSectionComponent,
     ProductsComponent,
+    FeatureSectionComponent,
   ],
   imports: [
     BrowserModule,
