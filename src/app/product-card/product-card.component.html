@@ -1,13 +1,21 @@
 <div>
-<mat-card *ngFor="let product of product">
-  <mat-card-title>{{product.title}}</mat-card-title>
-  <mat-card-subtitle>{{product.price | currency:'EUR':'symbol'}}</mat-card-subtitle>
-  <img mat-card-image [src]=product.imgUrl>
-  <mat-card-content><p>{{product.short_description}}</p></mat-card-content>
-  <mat-card-actions>
-    <button class="details" mat-button>details</button>
-    <button class="menu" mat-button>menu</button>
-    <button class="add-to-card" mat-button>add to cart</button>
-  </mat-card-actions>
-</mat-card>
+  <mat-card *ngFor="let product of product">
+    <mat-card-title>{{ product.title }}</mat-card-title>
+    <mat-card-subtitle>{{
+      product.price | currency : "EUR" : "symbol"
+    }}</mat-card-subtitle>
+    <img mat-card-image [src]="product.imgUrl" />
+    <mat-card-content
+      ><p>{{ product.short_description }}</p></mat-card-content
+    >
+    <mat-card-actions>
+      <button class="details" mat-button (click)="goToDetails()">
+        details
+      </button>
+      <button class="menu" mat-button (click)="goToMenu()">menu</button>
+      <button class="add-to-card" mat-button (click)="addToCard()">
+        add to cart
+      </button>
+    </mat-card-actions>
+  </mat-card>
 </div>
