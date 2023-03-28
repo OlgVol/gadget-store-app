@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
 
-registerLocaleData(localFr, 'fr')
+registerLocaleData(localFr, 'fr');
 
 @Component({
   selector: 'app-product-card',

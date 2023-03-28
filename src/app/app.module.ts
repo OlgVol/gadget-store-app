@@ -11,6 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { SharedModule } from './shared/shared-module';
 import { FeatureSectionComponent } from './feature-section/feature-section.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
