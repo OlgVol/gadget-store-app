@@ -1,4 +1,4 @@
-<button mat-button class="add-new-product">+ add new product</button>
+<button mat-button class="add-new-product" (click)="openDialog()">+ add new product</button>
 <div>
   <mat-card *ngFor="let product of product">
     <mat-card-title>{{ product.title }}</mat-card-title>

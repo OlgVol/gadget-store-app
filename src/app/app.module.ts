@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared-module';
 import { FeatureSectionComponent } from './feature-section/feature-section.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewProductDialogComponent } from './new-product-dialog/new-product-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsComponent,
     FeatureSectionComponent,
     ProductCardComponent,
+    NewProductDialogComponent,
   ],
   imports: [
     BrowserModule,
