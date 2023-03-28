@@ -2,8 +2,8 @@
   <mat-card *ngFor="let product of product">
     <mat-card-title>{{ product.title }}</mat-card-title>
     <mat-card-subtitle>PRICE: {{
-      product.price | currency : "EUR" : "symbol": '3.2-2':'fr'}}</mat-card-subtitle>
-    <img mat-card-image [src]="product.imgUrl" />
+      product.price | currency : "EUR" : "symbol":'2.2-2': 'fr'}}</mat-card-subtitle>
+    <img mat-card-image [src]="product.imgUrl" alt="{{product.title}}"/>
     <mat-card-content>
       <p>{{ product.short_description }}</p></mat-card-content
     >
