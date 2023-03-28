@@ -14,6 +14,7 @@ export class ProductCardComponent {
 
       short_description:
         ' Stay connected on the go with this sleek and versatile smartwatch.',
+      imgUrl: '../../../assets/images/smartwatch.png'
     },
     {
       title: 'Smart Assistant',
@@ -22,6 +23,7 @@ export class ProductCardComponent {
 
       short_description:
         ' Make your life easier with this smart assistant that can answer your questions.',
+        imgUrl: '../../../assets/images/smart_assistant.png'
     },
     {
       title: 'Smartphone',
@@ -30,6 +32,7 @@ export class ProductCardComponent {
 
       short_description:
         ' Stay connected and productive on the go with this powerful smartphone.   ',
+        imgUrl: '../../../assets/images/smartphone.png'
     },
     {
       title: 'Earbuds',
@@ -38,6 +41,7 @@ export class ProductCardComponent {
 
       short_description:
         ' Enjoy your favorite music and podcasts with these comfortable earbuds.',
+        imgUrl: '../../../assets/images/earbuds.png'
     },
     {
       title: 'Tablet',
@@ -46,6 +50,7 @@ export class ProductCardComponent {
 
       short_description:
         ' Stay productive and entertained on the go with this versatile tablet.',
+        imgUrl: '../../../assets/images/tablet.png'
     },
     {
       title: 'Portable Speaker',
@@ -54,6 +59,7 @@ export class ProductCardComponent {
 
       short_description:
         ' Take your music anywhere with this compact and powerful portable speaker.',
+        imgUrl: '../../../assets/images/portable_speaker.png'
     },
     {
       title: 'Web Camera',
@@ -61,6 +67,7 @@ export class ProductCardComponent {
       price: 59.99,
 
       short_description: ' Stay connected with this high-quality web camera. ',
+      imgUrl: '../../../assets/images/webcam.png'
     },
   ];
 }
