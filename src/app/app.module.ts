@@ -10,6 +10,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ProductsComponent } from './products/products.component';
 import { SharedModule } from './shared/shared-module';
 import { FeatureSectionComponent } from './feature-section/feature-section.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FeatureSectionComponent } from './feature-section/feature-section.compo
     HeroSectionComponent,
     ProductsComponent,
     FeatureSectionComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
