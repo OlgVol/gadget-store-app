@@ -1,5 +1,3 @@
-<!-- <app-product-card></app-product-card> -->
-
 <button mat-button class="add-new-product" (click)="openDialog()">+ add new product</button>
 <div>
   <mat-card *ngFor="let product of products">
@@ -15,7 +13,7 @@
       <p>{{ product.short_description }}</p></mat-card-content
     >
     <mat-card-actions>
-      <button class="details" mat-button (click)="goToDetails()">
+      <button class="details" mat-button [routerLink]="['/products/', product.id ]" (click)="goToDetails()">
         details
       </button>
       <button class="menu" mat-button (click)="goToMenu()">menu</button>

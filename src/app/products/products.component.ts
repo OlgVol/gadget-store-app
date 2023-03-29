@@ -6,6 +6,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { NewProductDialogComponent } from '../new-product-dialog/new-product-dialog.component';
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
+import { Router } from '@angular/router';
 
 registerLocaleData(localFr, 'fr');
 
@@ -21,7 +22,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
   constructor(
     private productsService: ProductService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    public router: Router
   ) {}
 
   openDialog() {
@@ -31,7 +33,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.dialog.open(NewProductDialogComponent, dialogConfig);
   }
   goToDetails() {
-    console.log('details');
+    this.router.navigateByUrl('/products/:id');
   }
   goToMenu() {
     console.log('menu');
