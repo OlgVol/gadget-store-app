@@ -10,7 +10,6 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ProductsComponent } from './products/products.component';
 import { SharedModule } from './shared/shared-module';
 import { FeatureSectionComponent } from './feature-section/feature-section.component';
-import { ProductCardComponent } from './product-card/product-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewProductDialogComponent } from './new-product-dialog/new-product-dialog.component';
 
@@ -21,7 +20,6 @@ import { NewProductDialogComponent } from './new-product-dialog/new-product-dial
     HeroSectionComponent,
     ProductsComponent,
     FeatureSectionComponent,
-    ProductCardComponent,
     NewProductDialogComponent,
   ],
   imports: [
