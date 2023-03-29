@@ -9,7 +9,7 @@ import { ProductService } from '../shared/product-service/product.service';
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  product: IProduct| undefined;
+  product: IProduct  | undefined;
   errorMessage = ''
   constructor(
     private route: ActivatedRoute,
