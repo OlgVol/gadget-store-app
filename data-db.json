@@ -48,6 +48,8 @@
 
       "warranty_period": "1 year",
 
+      "imgUrl": "./assets/images/smart_assistant.png",
+
       "features": [
         "Voice-activated",
 

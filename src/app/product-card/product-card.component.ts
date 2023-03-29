@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { NewProductDialogComponent } from '../new-product-dialog/new-product-dialog.component';
+import { ProductService } from '../shared/product-service/product.service';
+import { IProduct } from '../models/product.model';
+import { Subscription } from 'rxjs';
 
 registerLocaleData(localFr, 'fr');
 
@@ -10,9 +13,15 @@ registerLocaleData(localFr, 'fr');
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss'],
+  providers: [ProductService ]
 })
-export class ProductCardComponent {
-  constructor(public dialog: MatDialog) {}
+export class ProductCardComponent implements OnInit, OnDestroy{
+  products: IProduct[] = [];
+  sub!: Subscription;
+
+  constructor(private dialog: MatDialog,
+    private productsService: ProductService
+    ) {}
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -20,7 +29,7 @@ export class ProductCardComponent {
     dialogConfig.autoFocus = true;
     this.dialog.open(NewProductDialogComponent, dialogConfig);
   }
-
+  
   goToDetails() {
     console.log('details');
   }
@@ -33,68 +42,14 @@ export class ProductCardComponent {
   addNewProduct() {
     console.log('added new product');
   }
-  product = [
-    {
-      title: 'Smartwatch',
-
-      price: 199.99,
-
-      short_description:
-        ' Stay connected on the go with this sleek and versatile smartwatch.',
-      imgUrl: '../../../assets/images/smartwatch.png',
-    },
-    {
-      title: 'Smart Assistant',
-
-      price: 149.99,
-
-      short_description:
-        ' Make your life easier with this smart assistant that can answer your questions.',
-      imgUrl: '../../../assets/images/smart_assistant.png',
-    },
-    {
-      title: 'Smartphone',
-
-      price: 699.99,
-
-      short_description:
-        ' Stay connected and productive on the go with this powerful smartphone.   ',
-      imgUrl: '../../../assets/images/smartphone.png',
-    },
-    {
-      title: 'Earbuds',
-
-      price: 129.99,
-
-      short_description:
-        ' Enjoy your favorite music and podcasts with these comfortable earbuds.',
-      imgUrl: '../../../assets/images/earbuds.png',
-    },
-    {
-      title: 'Tablet',
-
-      price: 399.99,
-
-      short_description:
-        ' Stay productive and entertained on the go with this versatile tablet.',
-      imgUrl: '../../../assets/images/tablet.png',
-    },
-    {
-      title: 'Portable Speaker',
-
-      price: 99.99,
-
-      short_description:
-        ' Take your music anywhere with this compact and powerful portable speaker.',
-      imgUrl: '../../../assets/images/portable_speaker.png',
-    },
-    {
-      title: 'Web Camera',
-
-      price: 59.99,
-
-      short_description: ' Stay connected with this high-quality web camera. ',
-      imgUrl: '../../../assets/images/webcam.png',
-    },
-  ];
+  ngOnInit(): void {
+    this.sub = this.productsService.getProducts().subscribe({
+      next: (products) => {
+        this.products = products;
+      },
+    });
+  }
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
 }

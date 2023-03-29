@@ -7,5 +7,6 @@ export interface IProduct {
   year: number;
   RAM: string;
   warranty_period: string;
+  imgUrl: string;
   features: [];
 }
