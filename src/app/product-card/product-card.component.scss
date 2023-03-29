@@ -3,7 +3,7 @@ div {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top: 60px;
+  margin-top: 120px;
   margin-bottom: 60px;
   margin-left: 100px;
 }
@@ -74,4 +74,19 @@ mat-card-actions {
   box-shadow: 0px 2.11674px 2.11674px rgba(0, 0, 0, 0.25);
   border-radius: 3.1163px;
   color: #ffffff;
+}
+.add-new-product {
+  margin-top: 70px;
+  margin-left: 60%;
+  padding: 30px;
+  background: #3f51b5;
+  border-radius: 6.64463px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 23.2562px;
+  line-height: 27px;
+  align-items: center;
+  letter-spacing: 2.07645px;
+  text-transform: uppercase;
+  position: relative;
 }

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { NewProductDialogComponent } from '../new-product-dialog/new-product-dialog.component';
 
 registerLocaleData(localFr, 'fr');
 
@@ -10,6 +12,15 @@ registerLocaleData(localFr, 'fr');
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent {
+  constructor(public dialog: MatDialog) {}
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(NewProductDialogComponent, dialogConfig);
+  }
+
   goToDetails() {
     console.log('details');
   }
@@ -18,6 +29,9 @@ export class ProductCardComponent {
   }
   addToCard() {
     console.log('added to card');
+  }
+  addNewProduct() {
+    console.log('added new product');
   }
   product = [
     {
