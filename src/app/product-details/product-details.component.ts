@@ -10,6 +10,7 @@ import { ProductService } from '../shared/product-service/product.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product: IProduct | undefined;
+  //feature: IProduct [] =[]
   errorMessage = '';
   constructor(
     private route: ActivatedRoute,

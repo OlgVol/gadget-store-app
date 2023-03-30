@@ -15,13 +15,9 @@
             <li>{{product.warranty_period}}</li>
           </ul>
           <span>Features:</span>
-          <ul class="feature-list">
-            <li>Fitness tracking</li>
-            <li>Notifications</li>
-            <li>Voice command</li>
-            <li>Long battery life</li>
-            <li>Durable design</li>
-          </ul>
+          <ul class="feature-list" *ngIf="product.features">
+            <li *ngFor="let f of product.features">{{f}}</li>
+       </ul>
           <span
             >Price:
             {{
