@@ -7,6 +7,7 @@ import { NewProductDialogComponent } from '../new-product-dialog/new-product-dia
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
 import { Router } from '@angular/router';
+import { MenuDialogComponent } from '../menu-dialog/menu-dialog.component';
 
 registerLocaleData(localFr, 'fr');
 
@@ -32,11 +33,14 @@ export class ProductsComponent implements OnInit, OnDestroy {
     dialogConfig.autoFocus = true;
     this.dialog.open(NewProductDialogComponent, dialogConfig);
   }
-  // goToDetails() {
-  //   this.router.navigateByUrl('/products/:id');
-  // }
-  goToMenu() {
-    console.log('menu');
+  goToDetails() {
+    this.router.navigateByUrl('/products/');
+  }
+  goToMenuDialog() {
+    const menuDialogConfig = new MatDialogConfig();
+    menuDialogConfig.disableClose = true;
+    menuDialogConfig.autoFocus = true;
+    this.dialog.open(MenuDialogComponent, menuDialogConfig)
   }
   addToCard() {
     console.log('added to card');

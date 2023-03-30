@@ -1,36 +1,42 @@
-<div class="product-card" >
-  <mat-card *ngIf='product'>
+<div class="product-card">
+  <mat-card *ngIf="product">
     <mat-grid-list cols="2">
       <mat-grid-tile>
-    <div class="card-content">
-    <mat-card-title>{{product.title}}</mat-card-title>
-    <mat-card-content>
-      <p>
-        {{product.long_description}}
-      </p></mat-card-content>
-      <ul class="technical-list">
-        <li>Year:2022</li>
-        <li>RAM Memory: 1GB</li>
-        <li>Warranty: 2 years</li>
-      </ul>
-      <span>Features:</span>
-      <ul class="feature-list">
-        <li>Fitness tracking</li>
-        <li>Notifications</li>
-        <li>Voice command</li>
-        <li>Long battery life</li>
-        <li>Durable design</li>
-      </ul>
-      <span>Price: {{product.price| currency: 'EUR' : 'symbol': '1.2-2' }}</span>
-    <mat-card-actions>
-      <button mat-button class="menu">MENU</button>
-      <button mat-button class="add-to-cart">ADD TO CART</button>
-    </mat-card-actions>
-  </div>
-  </mat-grid-tile>
-  <mat-grid-tile>
-  <div class="img"> <img mat-card-image [src]=product.imgUrl /></div>
-  </mat-grid-tile>
-  </mat-grid-list>
+        <div class="card-content">
+          <mat-card-title>{{ product.title }}</mat-card-title>
+          <mat-card-content>
+            <p>
+              {{ product.long_description }}
+            </p></mat-card-content
+          >
+          <ul class="technical-list">
+            <li>{{product.year}}</li>
+            <li>{{product.RAM}}</li>
+            <li>{{product.warranty_period}}</li>
+          </ul>
+          <span>Features:</span>
+          <ul class="feature-list">
+            <li>Fitness tracking</li>
+            <li>Notifications</li>
+            <li>Voice command</li>
+            <li>Long battery life</li>
+            <li>Durable design</li>
+          </ul>
+          <span
+            >Price:
+            {{
+              product.price | currency : "EUR" : "symbol" : "2.2-2" : "fr"
+            }}</span
+          >
+          <mat-card-actions>
+            <button mat-button class="menu">MENU</button>
+            <button mat-button class="add-to-cart">ADD TO CART</button>
+          </mat-card-actions>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="img"><img mat-card-image [src]="product.imgUrl" /></div>
+      </mat-grid-tile>
+    </mat-grid-list>
   </mat-card>
-  </div>
+</div>

@@ -13,6 +13,7 @@ import { FeatureSectionComponent } from './feature-section/feature-section.compo
 import { HttpClientModule } from '@angular/common/http';
 import { NewProductDialogComponent } from './new-product-dialog/new-product-dialog.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     FeatureSectionComponent,
     NewProductDialogComponent,
     ProductDetailsComponent,
+    MenuDialogComponent,
   ],
   imports: [
     BrowserModule,

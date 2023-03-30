@@ -1,4 +1,6 @@
-<button mat-button class="add-new-product" (click)="openDialog()">+ add new product</button>
+<button mat-button class="add-new-product" (click)="openDialog()">
+  + add new product
+</button>
 <div>
   <mat-card *ngFor="let product of products">
     <mat-card-title>{{ product.title }}</mat-card-title>
@@ -13,15 +15,18 @@
       <p>{{ product.short_description }}</p></mat-card-content
     >
     <mat-card-actions>
-      <button class="details" mat-button [routerLink]="['/products/', product.id ]" >
+      <button
+        class="details"
+        mat-button
+        [routerLink]="['/products/', product.id]"
+        (onclick)="goToDetails()"
+      >
         details
       </button>
-      <button class="menu" mat-button (click)="goToMenu()">menu</button>
+      <button class="menu" mat-button (click)="goToMenuDialog()">menu</button>
       <button class="add-to-card" mat-button (click)="addToCard()">
         add to cart
       </button>
     </mat-card-actions>
   </mat-card>
 </div>
-
-

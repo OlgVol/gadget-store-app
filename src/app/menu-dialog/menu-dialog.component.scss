@@ -1,0 +1,27 @@
+div {
+background: #FFFFFF;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+height: 160px;
+width: 144px;
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+button {
+align-items: center;
+margin-bottom: 5px;
+padding: 16px 12px 14px 14px;
+width: 102px;
+height: 54px;
+background: rgba(33, 33, 33, 0.08);
+border-radius: 4px 4px 0px 0px;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+display: flex;
+align-items: center;
+letter-spacing: 0.15px;
+color: rgba(0, 0, 0, 0.87);
+}

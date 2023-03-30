@@ -18,10 +18,9 @@ export class ProductService {
     );
   }
   getProductById(id: number): Observable<IProduct | undefined> {
-    return this.getProducts()
-    .pipe(
-    map((products: IProduct[]) => products.find(p => p.id === id))
-    )
+    return this.getProducts().pipe(
+      map((products: IProduct[]) => products.find((p) => p.id === id))
+    );
   }
   private handleError(err: HttpErrorResponse): Observable<never> {
     let errorMessage = '';
