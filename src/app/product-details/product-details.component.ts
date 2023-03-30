@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../models/product.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../shared/product-service/product.service';
 
 @Component({
@@ -9,11 +9,12 @@ import { ProductService } from '../shared/product-service/product.service';
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  product: IProduct  | undefined;
-  errorMessage = ''
+  product: IProduct | undefined;
+  errorMessage = '';
   constructor(
     private route: ActivatedRoute,
     private productsService: ProductService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -22,10 +23,14 @@ export class ProductDetailsComponent implements OnInit {
       this.getProductById(id);
     }
   }
-  getProductById(id: number):void {
+  getProductById(id: number): void {
     this.productsService.getProductById(id).subscribe({
-      next: product => this.product = product,
-      error: err => this.errorMessage = err
-    })
+      next: (product) => (this.product = product),
+      error: (err) => (this.errorMessage = err),
+    });
+  }
+
+  onBack(): void {
+    this.router.navigate(['/products']);
   }
 }

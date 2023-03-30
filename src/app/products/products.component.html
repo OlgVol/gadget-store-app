@@ -13,7 +13,7 @@
       <p>{{ product.short_description }}</p></mat-card-content
     >
     <mat-card-actions>
-      <button class="details" mat-button [routerLink]="['/products/', product.id ]" (click)="goToDetails()">
+      <button class="details" mat-button [routerLink]="['/products/', product.id ]" >
         details
       </button>
       <button class="menu" mat-button (click)="goToMenu()">menu</button>

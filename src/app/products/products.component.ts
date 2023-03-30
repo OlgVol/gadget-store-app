@@ -32,9 +32,9 @@ export class ProductsComponent implements OnInit, OnDestroy {
     dialogConfig.autoFocus = true;
     this.dialog.open(NewProductDialogComponent, dialogConfig);
   }
-  goToDetails() {
-    this.router.navigateByUrl('/products/:id');
-  }
+  // goToDetails() {
+  //   this.router.navigateByUrl('/products/:id');
+  // }
   goToMenu() {
     console.log('menu');
   }
