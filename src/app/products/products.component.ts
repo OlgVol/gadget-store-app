@@ -40,10 +40,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
     const menuDialogConfig = new MatDialogConfig();
     menuDialogConfig.disableClose = true;
     menuDialogConfig.autoFocus = true;
-    this.dialog.open(MenuDialogComponent, menuDialogConfig)
+    this.dialog.open(MenuDialogComponent, menuDialogConfig);
   }
   addToCard() {
-    console.log('added to card');
+    console.log('added to cart');
   }
   addNewProduct() {
     console.log('added new product');
