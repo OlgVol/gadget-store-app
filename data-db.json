@@ -17,6 +17,8 @@
 
       "warranty_period": "2 years",
 
+      "imgUrl": "./assets/images/smartwatch.png",
+
       "features": [
         "Fitness tracking",
 
@@ -45,6 +47,8 @@
       "RAM": "512MB",
 
       "warranty_period": "1 year",
+
+      "imgUrl": "./assets/images/smart_assistant.png",
 
       "features": [
         "Voice-activated",
@@ -75,6 +79,8 @@
 
       "warranty_period": "2 years",
 
+      "imgUrl": "./assets/images/smartphone.png",
+
       "features": [
         "6.2-inch OLED display",
 
@@ -103,6 +109,8 @@
       "RAM": "N/A",
 
       "warranty_period": "1 year",
+
+      "imgUrl": "./assets/images/earbuds.png",
 
       "features": [
         "Noise-cancellation technology",
@@ -133,6 +141,8 @@
 
       "warranty_period": "2 years",
 
+      "imgUrl": "./assets/images/tablet.png",
+
       "features": [
         "10.1-inch display",
 
@@ -162,6 +172,8 @@
 
       "warranty_period": "1 year",
 
+      "imgUrl": "./assets/images/portable_speaker.png",
+
       "features": [
         "Bluetooth connectivity",
 
@@ -190,6 +202,8 @@
       "RAM": "N/A",
 
       "warranty_period": "1 year",
+
+      "imgUrl": "./assets/images/webcam.png",
 
       "features": [
         "1080p video",
