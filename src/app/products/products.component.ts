@@ -6,6 +6,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { NewProductDialogComponent } from '../new-product-dialog/new-product-dialog.component';
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
+import { Router } from '@angular/router';
+import { MenuDialogComponent } from '../menu-dialog/menu-dialog.component';
 
 registerLocaleData(localFr, 'fr');
 
@@ -21,7 +23,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
   constructor(
     private productsService: ProductService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    public router: Router
   ) {}
 
   openDialog() {
@@ -31,13 +34,16 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.dialog.open(NewProductDialogComponent, dialogConfig);
   }
   goToDetails() {
-    console.log('details');
+    this.router.navigateByUrl('/products/');
   }
-  goToMenu() {
-    console.log('menu');
+  goToMenuDialog() {
+    const menuDialogConfig = new MatDialogConfig();
+    menuDialogConfig.disableClose = true;
+    menuDialogConfig.autoFocus = true;
+    this.dialog.open(MenuDialogComponent, menuDialogConfig);
   }
   addToCard() {
-    console.log('added to card');
+    console.log('added to cart');
   }
   addNewProduct() {
     console.log('added new product');
