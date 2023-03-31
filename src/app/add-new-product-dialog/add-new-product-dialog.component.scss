@@ -1,0 +1,50 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 730px;
+  height: 600px;
+  margin-top: 20px;
+  align-items: center;
+
+}
+mat-form-field{
+width: 80%;
+border-style: hidden;
+outline: none;
+color:rgba(0, 0, 0, 0.38);
+//   text-align: center;
+//   align-self: center;
+//   width: 529px;
+//    height: 54px;
+//    margin: 5px;
+}
+
+input {
+  border-bottom-style: hidden;
+  outline: none;
+//   font-size: 10px;
+//   text-align: left;
+//   //vertical-align: center;
+//   letter-spacing: 0.15px;
+//   font-size: 16px;
+// //line-height: 24px;
+// //line-height: 128%;
+// font-weight: 400;
+// align-items: center;
+// vertical-align: center;
+}
+button {
+ margin-top: 2px;
+}
+
+.mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: rgba(0, 0, 0, 0.38) !important;
+ }
+
+.new-product-field ::ng-deep .mat-input-underline{
+  border-bottom: 1px solid red!important;
+}

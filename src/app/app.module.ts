@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddNewProductDialogComponent } from './add-new-product-dialog/add-new-product-dialog.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
