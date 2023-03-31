@@ -3,7 +3,7 @@ import { ProductService } from '../shared/product-service/product.service';
 import { IProduct } from '../models/product.model';
 import { Subscription } from 'rxjs';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { NewProductDialogComponent } from '../new-product-dialog/new-product-dialog.component';
+import { AddNewProductDialogComponent } from '../add-new-product-dialog/add-new-product-dialog.component';
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
 import { Router } from '@angular/router';
@@ -31,7 +31,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    this.dialog.open(NewProductDialogComponent, dialogConfig);
+    this.dialog.open(AddNewProductDialogComponent, dialogConfig);
   }
   goToDetails() {
     this.router.navigateByUrl('/products/');
