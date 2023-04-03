@@ -14,6 +14,7 @@ import { AddNewProductDialogComponent } from './add-new-product-dialog/add-new-p
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

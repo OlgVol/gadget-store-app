@@ -12,7 +12,7 @@ $my-theme: mat-light-theme($my-primary, $my-accent, $my-secondary);
 
 .alternative {
   $my-primary: mat-palette($mat-grey, 300);
-  $my-accent: mat-palette($mat-red, 500);
+  $my-accent: mat-palette($mat-indigo, 500);
   $my-theme: mat-light-theme($my-primary, $my-accent);
   @include angular-material-theme($my-theme);
 }
