@@ -125,15 +125,6 @@
         "Adjustable clip",
         "Compatible with Windows and Mac"
       ]
-    },
-    {
-      "title": "player",
-      "short_description": "bla-bla",
-      "long_description": "reale good",
-      "price": "1000",
-      "warranty_period": "25",
-      "RAM": "5",
-      "id": 9
     }
   ]
 }

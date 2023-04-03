@@ -1,4 +1,4 @@
-<form class="new-product-field" #productForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+<form class="new-product-field" #productForm="ngForm" (ngSubmit)="onSubmit()" novalidate *ngIf="!submitted">
   <mat-form-field appearance="fill" class="alternative">
     <mat-label class="mat-form-field-label">Title</mat-label>
     <input matInput name="title" [(ngModel)]="product.title" required>

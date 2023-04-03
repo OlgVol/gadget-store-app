@@ -15,6 +15,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { SuccessfulSubmissionComponent } from './successful-submission/successful-submission.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     AddNewProductDialogComponent,
     ProductDetailsComponent,
     MenuDialogComponent,
+    SuccessfulSubmissionComponent,
   ],
   imports: [
     BrowserModule,

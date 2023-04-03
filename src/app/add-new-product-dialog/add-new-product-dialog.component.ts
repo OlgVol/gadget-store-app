@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IProduct } from '../models/product.model';
 import { ProductService } from '../shared/product-service/product.service';
 import { Subscription } from 'rxjs';
+import { SuccessfulSubmissionComponent } from '../successful-submission/successful-submission.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-new-product-dialog',
@@ -19,13 +21,17 @@ product: IProduct = {
   RAM: "5",
 }
 sub!: Subscription;
+submitted = false;
 
-constructor(private service: ProductService) {}
+constructor(private service: ProductService,
+  private dialog: MatDialog) {}
 
 onSubmit(){
+  this.submitted =true
+  this.dialog.open(SuccessfulSubmissionComponent)
  this.service.addProduct(this.product)
  .subscribe(
-  data => console.log("success", data),
+  data => console.log('succses', data),
   error => console.log('Error!', error)
  )
 }
