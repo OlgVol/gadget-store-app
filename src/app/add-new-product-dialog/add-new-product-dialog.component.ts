@@ -4,6 +4,8 @@ import { ProductService } from '../shared/product-service/product.service';
 import { Subscription } from 'rxjs';
 import { SuccessfulSubmissionComponent } from '../successful-submission/successful-submission.component';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+//import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-new-product-dialog',
@@ -13,18 +15,22 @@ import { MatDialog } from '@angular/material/dialog';
 
 export class AddNewProductDialogComponent {
 product: IProduct = {
-  title: "player",
-  short_description: "bla-bla",
-  long_description : "reale good",
-  price: "1000",
-  warranty_period: "25",
-  RAM: "5",
+  title: "",
+  short_description: "",
+  long_description : "",
+  price: "",
+  warranty_period: "",
+  RAM: "",
 }
 sub!: Subscription;
 submitted = false;
 
 constructor(private service: ProductService,
-  private dialog: MatDialog) {}
+  private dialog: MatDialog,
+  //private succesT: SuccessfulSubmissionComponent,
+  private router: Router
+  //private toastr: ToastrService
+   ) {}
 
 onSubmit(){
   this.submitted =true

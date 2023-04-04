@@ -16,7 +16,7 @@ import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { SuccessfulSubmissionComponent } from './successful-submission/successful-submission.component';
-
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { SuccessfulSubmissionComponent } from './successful-submission/successfu
     MaterialModule,
     SharedModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    ToastrModule
   ],
   providers: [],
   bootstrap: [AppComponent],
