@@ -125,16 +125,6 @@
         "Adjustable clip",
         "Compatible with Windows and Mac"
       ]
-    },
-    {
-      "title": "Player",
-      "short_description": "bla",
-      "long_description": "",
-      "price": "1000",
-      "warranty_period": "2",
-      "RAM": "2",
-      "year": "2023",
-      "id": 9
     }
   ]
 }
