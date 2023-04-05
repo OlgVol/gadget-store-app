@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddNewProductDialogComponent } from './add-new-product-dialog/add-new-product-dialog.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
-import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { SuccessfulSubmissionComponent } from './successful-submission/successful-submission.component';
 import { ToastrModule } from 'ngx-toastr';
@@ -37,7 +36,6 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    MatInputModule,
     FormsModule,
     ToastrModule
   ],

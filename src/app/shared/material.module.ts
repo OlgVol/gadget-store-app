@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [],
@@ -20,6 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     CommonModule,
     MatCardModule,
     MatDialogModule,
+    MatInputModule
   ],
 })
 export class MaterialModule {}
