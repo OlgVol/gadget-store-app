@@ -1,19 +1,19 @@
-<form class="new-product-field" #productForm="ngForm" (ngSubmit)="onSubmit()" novalidate *ngIf="!submitted">
-  <mat-form-field appearance="fill" class="alternative">
+<form class="new-product-field" required #productForm="ngForm" (ngSubmit)="onSubmit()" novalidate *ngIf="!submitted">
+  <mat-form-field  appearance="fill" class="alternative">
     <mat-label class="mat-form-field-label">Title</mat-label>
-    <input matInput name="title" [(ngModel)]="product.title">
+    <input matInput required name="title" [(ngModel)]="product.title">
   </mat-form-field>
   <mat-form-field appearance="fill" class="alternative">
     <mat-label class="mat-form-field-label">Short description</mat-label>
-    <input matInput  name="short-description" [(ngModel)]="product.short_description"/>
+    <input matInput required name="short-description" [(ngModel)]="product.short_description"/>
   </mat-form-field>
   <mat-form-field appearance="fill" class="alternative">
     <mat-label class="mat-form-field-label">Long description</mat-label>
-    <input matInput [ngModel]="product.long_description" name="long-description"/>
+    <input matInput required [ngModel]="product.long_description" name="long-description"/>
   </mat-form-field>
   <mat-form-field appearance="fill" class="alternative">
     <mat-label class="mat-form-field-label">Price</mat-label>
-    <input matInput [(ngModel)]="product.price" name="price"/>
+    <input matInput required [(ngModel)]="product.price" name="price"/>
   </mat-form-field>
   <mat-form-field appearance="fill" class="alternative">
     <mat-label class="mat-form-field-label">Year</mat-label>
@@ -32,3 +32,4 @@
     <button mat-button [disabled]="productForm.invalid" class="add-product">add product</button>
   </mat-card-actions>
 </form>
+
