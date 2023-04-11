@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, Observable, tap, throwError, map } from 'rxjs';
 import { IProduct } from 'src/app/models/product.model';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -31,4 +32,8 @@ export class ProductService {
     }
     return throwError(() => errorMessage);
   }
+addProduct(product: IProduct) {
+ return this.http.post<IProduct>(this.productUrl, product)
+}
+
 }
