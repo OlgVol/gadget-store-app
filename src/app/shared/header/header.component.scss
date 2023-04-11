@@ -11,3 +11,14 @@ a.button {
 a {
   text-decoration: none;
 }
+@media only screen and (max-width: 620px) {
+h1 {
+  width: 100%;
+  display: table-column;
+}
+  a.button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
