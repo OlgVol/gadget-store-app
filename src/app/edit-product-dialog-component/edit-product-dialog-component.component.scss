@@ -1,0 +1,67 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 730px;
+  height: 600px;
+  margin-top: 20px;
+  align-items: center;
+}
+mat-form-field{
+width: 80%;
+border-style: hidden;
+outline: none;
+color:rgba(0, 0, 0, 0.38);
+}
+
+input {
+  border-bottom-style: hidden;
+  outline: none;
+}
+button {
+ margin-top: 2px;
+}
+
+.mat-focused .mat-form-field-label {
+  color: rgba(0, 0, 0, 0.38) !important;
+ }
+.cancel,
+.add-product {
+  font-size: 11.1669px;
+  letter-spacing: 0.997042px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.cancel {
+  color: #3f51b5;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.add-product {
+  background: #3f51b5;
+  box-shadow: 0px 2.11674px 2.11674px rgba(0, 0, 0, 0.25);
+  border-radius: 3.1163px;
+  color: #ffffff;
+}
+@media only screen and (max-width: 620px) {
+  form {
+    width: 300px;
+    height: 600px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  button {
+   margin-top: 2px;
+  }
+  .cancel,
+  .add-product {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+    align-items: center;
+  }
+}
+

@@ -16,6 +16,7 @@ import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 import { FormsModule } from '@angular/forms';
 import { SuccessfulSubmissionComponent } from './successful-submission/successful-submission.component';
 import { SuccessToasterComponent } from './success-toaster/success-toaster.component';
+import { EditProductDialogComponentComponent } from './edit-product-dialog-component/edit-product-dialog-component.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SuccessToasterComponent } from './success-toaster/success-toaster.compo
     MenuDialogComponent,
     SuccessfulSubmissionComponent,
     SuccessToasterComponent,
+    EditProductDialogComponentComponent,
   ],
   imports: [
     BrowserModule,
