@@ -125,6 +125,17 @@
         "Adjustable clip",
         "Compatible with Windows and Mac"
       ]
+    },
+    {
+      "title": "plater",
+      "short_description": "sdd",
+      "long_description": "",
+      "price": "1000",
+      "warranty_period": "444",
+      "RAM": "33",
+      "imgUrl": "./assets/images/tablet.png",
+      "year": "2",
+      "id": 9
     }
   ]
 }

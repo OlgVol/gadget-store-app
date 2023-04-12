@@ -46,4 +46,22 @@ button {
   border-radius: 3.1163px;
   color: #ffffff;
 }
+@media only screen and (max-width: 620px) {
+  form {
+    width: 300px;
+    height: 600px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  button {
+   margin-top: 2px;
+  }
+  .cancel,
+  .add-product {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+    align-items: center;
+  }
+}
 
