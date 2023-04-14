@@ -3,6 +3,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { NgForm } from '@angular/forms';
 import { AddNewProductDialogComponent } from '../add-new-product-dialog/add-new-product-dialog.component';
 import { IProduct } from '../models/product.model';
+import { EditProductDialogComponentComponent } from '../edit-product-dialog-component/edit-product-dialog-component.component';
 
 @Component({
   selector: 'app-menu-dialog',
@@ -22,6 +23,6 @@ export class MenuDialogComponent {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    this.dialog.open(AddNewProductDialogComponent, dialogConfig);
+    this.dialog.open(EditProductDialogComponentComponent, dialogConfig);
   }
 }

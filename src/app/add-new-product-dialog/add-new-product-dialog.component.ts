@@ -12,6 +12,7 @@ import { SuccessToasterComponent } from '../success-toaster/success-toaster.comp
 })
 export class AddNewProductDialogComponent {
   product: IProduct = {
+    id: 0,
     title: '',
     short_description: '',
     long_description: '',

@@ -158,6 +158,17 @@
       "imgUrl": "./assets/images/tablet.png",
       "year": "nnn",
       "id": 11
+    },
+    {
+      "id": 12,
+      "title": "gvjgv",
+      "short_description": "fghj",
+      "long_description": "sdfghjkl",
+      "price": "10",
+      "warranty_period": "2",
+      "RAM": "2",
+      "imgUrl": "./assets/images/tablet.png",
+      "year": "2022"
     }
   ]
 }
