@@ -18,7 +18,7 @@ export class AddNewProductDialogComponent {
     price: '',
     warranty_period: '',
     RAM: '',
-    imgUrl : "./assets/images/tablet.png"
+    imgUrl: "./assets/images/tablet.png",
   };
   sub!: Subscription;
   submitted = false;

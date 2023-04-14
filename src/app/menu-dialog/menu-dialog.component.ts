@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { EditProductDialogComponentComponent } from '../edit-product-dialog-component/edit-product-dialog-component.component';
+import { NgForm } from '@angular/forms';
+import { AddNewProductDialogComponent } from '../add-new-product-dialog/add-new-product-dialog.component';
+import { IProduct } from '../models/product.model';
 
 @Component({
   selector: 'app-menu-dialog',
@@ -8,6 +10,9 @@ import { EditProductDialogComponentComponent } from '../edit-product-dialog-comp
   styleUrls: ['./menu-dialog.component.scss'],
 })
 export class MenuDialogComponent {
+  @ViewChild('productForm') form?: NgForm;
+  products: IProduct[]=[]
+
   constructor(private dialog: MatDialog) {}
 
   onDelete() {
@@ -17,6 +22,6 @@ export class MenuDialogComponent {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    this.dialog.open(EditProductDialogComponentComponent, dialogConfig);
+    this.dialog.open(AddNewProductDialogComponent, dialogConfig);
   }
 }

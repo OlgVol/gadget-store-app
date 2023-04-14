@@ -136,6 +136,28 @@
       "imgUrl": "./assets/images/tablet.png",
       "year": "2",
       "id": 9
+    },
+    {
+      "title": "Player",
+      "short_description": "bla-blagvgvmh",
+      "long_description": "",
+      "price": "1000",
+      "warranty_period": "4",
+      "RAM": "5",
+      "imgUrl": "./assets/images/tablet.png",
+      "year": "32",
+      "id": 10
+    },
+    {
+      "title": "Player",
+      "short_description": "bla",
+      "long_description": "blablabla",
+      "price": "dfgb",
+      "warranty_period": "3444",
+      "RAM": "5",
+      "imgUrl": "./assets/images/tablet.png",
+      "year": "nnn",
+      "id": 11
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ProductService } from '../shared/product-service/product.service';
 import { IProduct } from '../models/product.model';
 import { Subscription } from 'rxjs';
@@ -8,6 +8,7 @@ import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
 import { Router } from '@angular/router';
 import { MenuDialogComponent } from '../menu-dialog/menu-dialog.component';
+import { EditProductDialogComponentComponent } from '../edit-product-dialog-component/edit-product-dialog-component.component';
 
 registerLocaleData(localFr, 'fr');
 
@@ -18,14 +19,17 @@ registerLocaleData(localFr, 'fr');
   providers: [ProductService],
 })
 export class ProductsComponent implements OnInit, OnDestroy {
-  products: IProduct[] = [];
+  products: IProduct[] = [] ;
   sub!: Subscription;
+  // @Input() productForm: AddNewProductDialogComponent;
+// public productForm!: NgForm | AddNewProductDialogComponent;
 
   constructor(
     private productsService: ProductService,
     private dialog: MatDialog,
     public router: Router
-  ) {}
+  ) {
+  }
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -34,7 +38,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.dialog.open(AddNewProductDialogComponent, dialogConfig);
   }
   goToDetails() {
-    this.router.navigateByUrl('/products/');
+    this.router.navigateByUrl('/products/:id');
   }
   goToMenuDialog() {
     const menuDialogConfig = new MatDialogConfig();
@@ -58,4 +62,13 @@ export class ProductsComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
+  onEdit(id: number| undefined): void {
+const currentProduct = this.products.find((p) => {return p.id === id})
+console.log(currentProduct)
+ const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    this.dialog.open(EditProductDialogComponentComponent, dialogConfig);
+// });
+}
 }

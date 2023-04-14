@@ -23,7 +23,11 @@
       >
         details
       </button>
-      <button class="menu" mat-button (click)="goToMenuDialog()">menu</button>
+      <button class="menu" mat-button [matMenuTriggerFor]="menu">menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onEdit(product.id)">Edit</button>
+        <button mat-menu-item >Delete</button>
+      </mat-menu>
       <button class="add-to-card" mat-button (click)="addToCard()">
         add to cart
       </button>
