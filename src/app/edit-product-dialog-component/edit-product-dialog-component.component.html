@@ -1,10 +1,54 @@
-<form  [formGroup]="productForm">
-  <div *ngFor="let product of products">
+<form class="new-product-field" (ngSubmit)="onFormSubmit()" [formGroup]="productForm" >
+<div mat-dialog-content >
+  <mat-form-field  appearance="fill" class="alternative">
+    <mat-label class="mat-form-field-label">Title</mat-label>
+    <input matInput type="text" formControlName="title" >
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="alternative">
+    <mat-label class="mat-form-field-label">Short description</mat-label>
+    <input matInput type="text" formControlName="short_description" />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="alternative">
+    <mat-label class="mat-form-field-label">Long description</mat-label>
+    <input matInput required type="text" formControlName="long_description"/>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="alternative">
+    <mat-label class="mat-form-field-label">Price</mat-label>
+    <input matInput required type="text" formControlName="price"/>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="alternative">
+    <mat-label class="mat-form-field-label">Year</mat-label>
+    <input matInput  formControlName="year" type="text"/>
+  </mat-form-field>
+  <mat-form-field class="alternative" appearance="fill">
+    <mat-label class="mat-form-field-label">RAM memory</mat-label>
+    <input matInput formControlName="memory" type="text"/>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="alternative">
+    <mat-label class="mat-form-field-label">Warranty period</mat-label>
+    <input matInput  formControlName="warranty" type="text"/>
+  </mat-form-field>
+</div>
+  <mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="products" class="cancel">cancel</button>
+    <button mat-button type="submit" class="edit-product">update</button>
+  </mat-dialog-actions>
+</form>
+<!-- <form  [formGroup]="productForm" >
+  <div *ngFor="let product of product">
     <mat-form-field  appearance="fill" class="alternative">
-      <mat-label class="mat-form-field-label">Title</mat-label>
+      <mat-label class="mat-form-field-label" for="title">Title</mat-label>
+     <input matInput  formControlName="title" >
+   </mat-form-field>
+   <mat-form-field appearance="fill" class="alternative">
+    <mat-label class="mat-form-field-label" for="product.short-description">Short description</mat-label>
+    <input matInput name="short-description"  formControlName="short_description"/>
+  </mat-form-field> -->
+    <!-- <mat-form-field  appearance="fill" class="alternative">
+       <mat-label class="mat-form-field-label">Title</mat-label>
       <input matInput required name="title"  [(ngModel)]="product.title" (ngModelChange)="product.title=$event">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="alternative">
+    </mat-form-field> -->
+    <!-- <mat-form-field appearance="fill" class="alternative">
       <mat-label class="mat-form-field-label">Short description</mat-label>
       <input matInput name="short-description" [(ngModel)]="product.short_description" (ngModelChange)="product.short_description=$event"/>
     </mat-form-field>
@@ -27,12 +71,12 @@
     <mat-form-field appearance="fill" class="alternative">
       <mat-label class="mat-form-field-label">Warranty period</mat-label>
       <input matInput [(ngModel)]="product.warranty_period" name="warranty" (ngModelChange)="product.warranty_period=$event"/>
-    </mat-form-field>
-  </div>
+    </mat-form-field> -->
+  <!-- </div>
   <mat-card-actions>
     <button mat-button [mat-dialog-close]="productForm" class="cancel" >cancel</button>
     <button mat-button [disabled]="productForm.invalid" class="edit-product" (click)="onUpdate()" >update</button>
   </mat-card-actions>
-</form>
+</form> -->
 
 

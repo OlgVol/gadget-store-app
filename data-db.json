@@ -125,50 +125,6 @@
         "Adjustable clip",
         "Compatible with Windows and Mac"
       ]
-    },
-    {
-      "title": "plater",
-      "short_description": "sdd",
-      "long_description": "",
-      "price": "1000",
-      "warranty_period": "444",
-      "RAM": "33",
-      "imgUrl": "./assets/images/tablet.png",
-      "year": "2",
-      "id": 9
-    },
-    {
-      "title": "Player",
-      "short_description": "bla-blagvgvmh",
-      "long_description": "",
-      "price": "1000",
-      "warranty_period": "4",
-      "RAM": "5",
-      "imgUrl": "./assets/images/tablet.png",
-      "year": "32",
-      "id": 10
-    },
-    {
-      "title": "Player",
-      "short_description": "bla",
-      "long_description": "blablabla",
-      "price": "dfgb",
-      "warranty_period": "3444",
-      "RAM": "5",
-      "imgUrl": "./assets/images/tablet.png",
-      "year": "nnn",
-      "id": 11
-    },
-    {
-      "id": 12,
-      "title": "gvjgv",
-      "short_description": "fghj",
-      "long_description": "sdfghjkl",
-      "price": "10",
-      "warranty_period": "2",
-      "RAM": "2",
-      "imgUrl": "./assets/images/tablet.png",
-      "year": "2022"
     }
   ]
 }

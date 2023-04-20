@@ -37,14 +37,17 @@ addProduct(product: IProduct) {
  return this.http.post<IProduct>(this.productUrl, product)
 }
 
-updateProduct(product: IProduct): Observable<IProduct> {
-const headers = new HttpHeaders({'Content-Type': 'application/json'});
-const url = `${this.productUrl}/${product.id}`;
-return this.http.put<IProduct>(url, product, { headers })
-.pipe(
-  tap(() => console.log('updateProduct: ' + product.id)),
-  map(() => product),
-  catchError(this.handleError)
-)
+deleteProduct(id: number): Observable<IProduct> {
+  return this.http.delete<IProduct>(`${this.productUrl}/${id}`)
 }
+// updateProduct(product: IProduct): Observable<IProduct> {
+// const headers = new HttpHeaders({'Content-Type': 'application/json'});
+// const url = `${this.productUrl}/${product.id}`;
+// return this.http.put<IProduct>(url, product, { headers })
+// .pipe(
+//   tap(() => console.log('updateProduct: ' + product.id)),
+//   map(() => product),
+//   catchError(this.handleError)
+// )
+// }
 }
