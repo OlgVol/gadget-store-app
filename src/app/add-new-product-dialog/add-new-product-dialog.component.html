@@ -1,35 +1,37 @@
-<form class="new-product-field" required #productForm="ngForm" (ngSubmit)="onSubmit()" novalidate *ngIf="!submitted">
-  <mat-form-field  appearance="fill" class="alternative">
-    <mat-label class="mat-form-field-label">Title</mat-label>
-    <input matInput required name="title" [(ngModel)]="product.title">
-  </mat-form-field>
-  <mat-form-field appearance="fill" class="alternative">
-    <mat-label class="mat-form-field-label">Short description</mat-label>
-    <input matInput required name="short-description" [(ngModel)]="product.short_description"/>
-  </mat-form-field>
-  <mat-form-field appearance="fill" class="alternative">
-    <mat-label class="mat-form-field-label">Long description</mat-label>
-    <input matInput required [(ngModel)]="product.long_description" name="long-description"/>
-  </mat-form-field>
-  <mat-form-field appearance="fill" class="alternative">
-    <mat-label class="mat-form-field-label">Price</mat-label>
-    <input matInput required [(ngModel)]="product.price" name="price"/>
-  </mat-form-field>
-  <mat-form-field appearance="fill" class="alternative">
-    <mat-label class="mat-form-field-label">Year</mat-label>
-    <input matInput [(ngModel)]="product.year" name="yaer"/>
-  </mat-form-field>
-  <mat-form-field class="alternative" appearance="fill">
-    <mat-label class="mat-form-field-label">RAM memory</mat-label>
-    <input matInput [(ngModel)]="product.RAM" name="memory"/>
-  </mat-form-field>
-  <mat-form-field appearance="fill" class="alternative">
-    <mat-label class="mat-form-field-label">Warranty period</mat-label>
-    <input matInput [(ngModel)]="product.warranty_period" name="warranty"/>
-  </mat-form-field>
-  <mat-card-actions>
-    <button mat-button [mat-dialog-close]="product" class="cancel">cancel</button>
-    <button mat-button [disabled]="productForm.invalid" class="add-product">add product</button>
-  </mat-card-actions>
-</form>
+<form class="new-product-field" (ngSubmit)="onFormSubmit()" [formGroup]="productForm" >
+  <div mat-dialog-content >
+    <mat-form-field  appearance="fill" class="alternative">
+      <mat-label class="mat-form-field-label">Title</mat-label>
+      <input matInput type="text" formControlName="title" >
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="alternative">
+      <mat-label class="mat-form-field-label">Short description</mat-label>
+      <input matInput type="text" formControlName="short_description" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="alternative">
+      <mat-label class="mat-form-field-label">Long description</mat-label>
+      <input matInput required type="text" formControlName="long_description"/>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="alternative">
+      <mat-label class="mat-form-field-label">Price</mat-label>
+      <input matInput required type="text" formControlName="price"/>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="alternative">
+      <mat-label class="mat-form-field-label">Year</mat-label>
+      <input matInput  formControlName="year" type="text"/>
+    </mat-form-field>
+    <mat-form-field class="alternative" appearance="fill">
+      <mat-label class="mat-form-field-label">RAM memory</mat-label>
+      <input matInput formControlName="memory" type="text"/>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="alternative">
+      <mat-label class="mat-form-field-label">Warranty period</mat-label>
+      <input matInput  formControlName="warranty" type="text"/>
+    </mat-form-field>
+  </div>
+    <mat-dialog-actions>
+      <button mat-button [mat-dialog-close]="false" class="cancel">cancel</button>
+      <button mat-button type="submit" class="add-product">{{data? 'update' : 'add product'}}</button>
+    </mat-dialog-actions>
+  </form>
 

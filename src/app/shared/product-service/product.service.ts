@@ -40,6 +40,10 @@ addProduct(product: IProduct) {
 deleteProduct(id: number): Observable<IProduct> {
   return this.http.delete<IProduct>(`${this.productUrl}/${id}`)
 }
+
+updateProduct(id: number, product: IProduct): Observable<IProduct> {
+  return this.http.put<IProduct>(`${this.productUrl}/${id}`, product)
+}
 // updateProduct(product: IProduct): Observable<IProduct> {
 // const headers = new HttpHeaders({'Content-Type': 'application/json'});
 // const url = `${this.productUrl}/${product.id}`;

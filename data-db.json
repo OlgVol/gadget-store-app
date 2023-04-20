@@ -125,6 +125,17 @@
         "Adjustable clip",
         "Compatible with Windows and Mac"
       ]
+    },
+    {
+      "title": "Player-shmayer",
+      "short_description": "dddddff",
+      "long_description": "blabla bla",
+      "price": "10000",
+      "year": "10",
+      "memory": "6666",
+      "warranty": "2",
+      "imgUrl": "./assets/images/tablet.png",
+      "id": 9
     }
   ]
 }

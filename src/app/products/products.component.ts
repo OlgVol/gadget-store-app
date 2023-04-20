@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { ProductService } from '../shared/product-service/product.service';
 import { IProduct } from '../models/product.model';
 import { Subscription } from 'rxjs';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { AddNewProductDialogComponent } from '../add-new-product-dialog/add-new-product-dialog.component';
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   constructor(
     private productsService: ProductService,
     private dialog: MatDialog,
-    public router: Router
+    public router: Router,
   ) {}
 
   openDialog() {
@@ -69,8 +69,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
   //     dialogConfig.autoFocus = true;
   //     this.dialog.open(EditProductDialogComponentComponent, dialogConfig);
   // });
-  onEdit() {
-    this.dialog.open(EditProductDialogComponentComponent);
+  onEdit(data: any) {
+   this.dialog.open(AddNewProductDialogComponent, {
+   data,
+   });
   }
   OnDeleteProduct(id: number) {
     this.productsService.deleteProduct(id).subscribe({
