@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, tap, throwError, map } from 'rxjs';
 import { IProduct } from 'src/app/models/product.model';
 
@@ -11,6 +11,7 @@ export class ProductService {
   public productUrl = 'http://localhost:3000/products';
 
   constructor(private http: HttpClient) {}
+
 
   getProducts(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(this.productUrl).pipe(
@@ -36,4 +37,21 @@ addProduct(product: IProduct) {
  return this.http.post<IProduct>(this.productUrl, product)
 }
 
+deleteProduct(id: number): Observable<IProduct> {
+  return this.http.delete<IProduct>(`${this.productUrl}/${id}`)
+}
+
+updateProduct(id: number, product: IProduct): Observable<IProduct> {
+  return this.http.put<IProduct>(`${this.productUrl}/${id}`, product)
+}
+// updateProduct(product: IProduct): Observable<IProduct> {
+// const headers = new HttpHeaders({'Content-Type': 'application/json'});
+// const url = `${this.productUrl}/${product.id}`;
+// return this.http.put<IProduct>(url, product, { headers })
+// .pipe(
+//   tap(() => console.log('updateProduct: ' + product.id)),
+//   map(() => product),
+//   catchError(this.handleError)
+// )
+// }
 }

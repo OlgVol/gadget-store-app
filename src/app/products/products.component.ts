@@ -7,7 +7,6 @@ import { AddNewProductDialogComponent } from '../add-new-product-dialog/add-new-
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
 import { Router } from '@angular/router';
-import { MenuDialogComponent } from '../menu-dialog/menu-dialog.component';
 
 registerLocaleData(localFr, 'fr');
 
@@ -20,7 +19,6 @@ registerLocaleData(localFr, 'fr');
 export class ProductsComponent implements OnInit, OnDestroy {
   products: IProduct[] = [];
   sub!: Subscription;
-
   constructor(
     private productsService: ProductService,
     private dialog: MatDialog,
@@ -34,13 +32,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.dialog.open(AddNewProductDialogComponent, dialogConfig);
   }
   goToDetails() {
-    this.router.navigateByUrl('/products/');
-  }
-  goToMenuDialog() {
-    const menuDialogConfig = new MatDialogConfig();
-    menuDialogConfig.disableClose = true;
-    menuDialogConfig.autoFocus = true;
-    this.dialog.open(MenuDialogComponent, menuDialogConfig);
+    this.router.navigateByUrl('/products/:id');
   }
   addToCard() {
     console.log('added to cart');
@@ -57,5 +49,19 @@ export class ProductsComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.sub.unsubscribe();
+  }
+  onEdit(data: any) {
+    this.dialog.open(AddNewProductDialogComponent, {
+      data,
+    });
+  }
+  OnDeleteProduct(id: number) {
+    this.productsService.deleteProduct(id).subscribe({
+      next: (res) => {
+        alert('product deleted');
+        location.reload();
+      },
+      error: console.log,
+    });
   }
 }

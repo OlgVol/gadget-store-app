@@ -1,8 +1,8 @@
 export interface IProduct {
-  id?: number;
+  id: number;
   title: string;
   price: string;
-  short_description: string;
+  short_description?: string;
   long_description: string;
   year?: number;
   RAM: string;

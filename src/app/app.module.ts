@@ -12,8 +12,7 @@ import { FeatureSectionComponent } from './feature-section/feature-section.compo
 import { HttpClientModule } from '@angular/common/http';
 import { AddNewProductDialogComponent } from './add-new-product-dialog/add-new-product-dialog.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessfulSubmissionComponent } from './successful-submission/successful-submission.component';
 import { SuccessToasterComponent } from './success-toaster/success-toaster.component';
 
@@ -26,7 +25,6 @@ import { SuccessToasterComponent } from './success-toaster/success-toaster.compo
     FeatureSectionComponent,
     AddNewProductDialogComponent,
     ProductDetailsComponent,
-    MenuDialogComponent,
     SuccessfulSubmissionComponent,
     SuccessToasterComponent,
   ],
@@ -38,6 +36,7 @@ import { SuccessToasterComponent } from './success-toaster/success-toaster.compo
     MaterialModule,
     SharedModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
