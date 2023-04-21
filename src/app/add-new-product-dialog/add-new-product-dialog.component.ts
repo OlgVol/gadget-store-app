@@ -11,8 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './add-new-product-dialog.component.html',
   styleUrls: ['./add-new-product-dialog.component.scss'],
 })
-export class AddNewProductDialogComponent {
-  // products: IProduct[] =[]
+export class AddNewProductDialogComponent implements OnInit {
   productForm: FormGroup;
   durationInSeconds = 5;
   constructor(
@@ -27,8 +26,8 @@ export class AddNewProductDialogComponent {
       long_description: '',
       price: '',
       year: '',
-      memory: '',
-      warranty: '',
+      RAM: '',
+      warranty_period: '',
       imgUrl: './assets/images/tablet.png',
     });
   }
@@ -52,19 +51,19 @@ export class AddNewProductDialogComponent {
               console.log(err);
             },
           });
+      } else {
+        this.service.addProduct(this.productForm.value).subscribe({
+          next: (val: any) => {
+            this._snackBar.openFromComponent(SuccessToasterComponent, {
+              duration: this.durationInSeconds * 1000,
+              panelClass: ['green-snackbar'],
+            });
+          },
+          error: (err: any) => {
+            console.error(err);
+          },
+        });
       }
-    } else {
-      this.service.addProduct(this.productForm.value).subscribe({
-        next: (val: any) => {
-          this._snackBar.openFromComponent(SuccessToasterComponent, {
-            duration: this.durationInSeconds * 1000,
-            panelClass: ['green-snackbar'],
-          });
-        },
-        error: (err: any) => {
-          console.error(err);
-        },
-      });
     }
   }
 }
