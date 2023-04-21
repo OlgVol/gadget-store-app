@@ -69,3 +69,26 @@ mat-card-actions {
   letter-spacing: 2.07645px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 620px) {
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .add-new-product {
+    margin-top: 30px;
+    margin-left: 50%;
+    padding: 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  mat-card {
+    align-items: center;
+    width: 310px;
+    height: 450px;
+  }
+}

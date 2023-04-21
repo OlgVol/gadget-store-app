@@ -35,3 +35,18 @@ img {
   bottom: 0;
   margin-bottom: 0px;
 }
+@media only screen and (max-width: 620px) {
+  h1 {
+    font-style: bold;
+    font-size: 20px;
+    line-height: 100%;
+  }
+  p {
+    font-size: 10px;
+  }
+  button {
+    border-radius: 5.8px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}

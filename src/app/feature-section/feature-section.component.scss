@@ -33,3 +33,40 @@ p {
   text-align: center;
   margin: 20px;
 }
+@media only screen and (max-width: 620px) {
+  h1 {
+    font-style: bold;
+    font-size: 20px;
+    line-height: 100%;
+    margin-top: 10px;
+  }
+  mat-card {
+    width: 100%;
+    height: auto;
+    background-color: #f5e48b;
+    margin: 10px;
+    padding: 0;
+  }
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  mat-icon {
+    height: 20%;
+    width: auto;
+    margin: 2px;
+    text-align: center;
+  }
+  mat-card-title {
+    align-self: center;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 5px;
+  }
+  p {
+    font-size: 10px;
+    text-align: center;
+    margin: 5px;
+  }
+}

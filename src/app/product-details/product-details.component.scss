@@ -66,3 +66,48 @@ button {
   margin-top: 20px;
   padding: 10px;
 }
+@media only screen and (max-width: 620px) {
+  .product-card {
+    margin: 5px;
+    width: auto;
+  }
+  .card-content {
+    margin-left: 3px;
+    font-size: 5px;
+  }
+  .technical-list li {
+    margin-right: 5px;
+    display: inline;
+    font-size: 7px;
+  }
+  mat-card-title {
+    font-weight: 500;
+    font-size: 7px;
+    letter-spacing: 0.15px;
+    margin-bottom: 2px;
+  }
+  p {
+    line-height: 7px;
+  }
+  span {
+    font-weight: 300;
+    font-size: 5px;
+    letter-spacing: 0.25px;
+    margin-bottom: 2px;
+  }
+  .feature-list li {
+    line-height: 10px;
+  }
+  .add-to-cart {
+    font-size: 7px;
+    letter-spacing: 1px;
+    margin: 10px;
+  }
+  .menu {
+    font-size: 7px;
+    margin: 10px;
+  }
+  button {
+    margin-top: 2px;
+  }
+}
