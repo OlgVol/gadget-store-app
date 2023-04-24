@@ -15,6 +15,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessfulSubmissionComponent } from './successful-submission/successful-submission.component';
 import { SuccessToasterComponent } from './success-toaster/success-toaster.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SuccessToasterComponent } from './success-toaster/success-toaster.compo
     ProductDetailsComponent,
     SuccessfulSubmissionComponent,
     SuccessToasterComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
