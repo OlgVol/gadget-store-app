@@ -1,6 +1,7 @@
 <div class="page-title">
-<h1 class="page-name">{{title | titlecase}}</h1>
-<h1 class="total">Total:</h1>
+  <h1 class="page-name">{{ title | titlecase }}</h1>
+
+  <h1 class="total">Total:</h1>
 </div>
 <div class="product-card">
   <mat-card *ngFor="let product of products">
@@ -12,27 +13,23 @@
         <div class="card-content">
           <mat-card-title>{{ product.title }}</mat-card-title>
           <ul class="technical-list">
-            <li>Year:{{product.year}}</li>
-            <li>RAM Memory:{{product.RAM}}</li>
-            <li>Warranty:{{product.warranty_period}}</li>
+            <li>Year:{{ product.year }}</li>
+            <li>RAM Memory:{{ product.RAM }}</li>
+            <li>Warranty:{{ product.warranty_period }}</li>
           </ul>
         </div>
       </mat-grid-tile>
       <mat-grid-tile>
-        <button mat-button class="remove"><mat-icon>remove</mat-icon>
-        </button>1
-    <button class="plus" mat-button><mat-icon>add</mat-icon>
-    </button>
+        <button mat-button class="remove"><mat-icon>remove</mat-icon></button>1
+        <button class="plus" mat-button><mat-icon>add</mat-icon></button>
       </mat-grid-tile>
       <mat-grid-tile>
-
         <span
           >Total:
           {{
             product.price | currency : "EUR" : "symbol" : "2.2-2" : "fr"
           }}</span
         >
-
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card>
