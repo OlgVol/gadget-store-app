@@ -41,25 +41,25 @@ export class AddNewProductDialogComponent implements OnInit {
         this.service
           .updateProduct(this.data.id, this.productForm.value)
           .subscribe({
-            next: (val: any) => {
+            next: (val) => {
               this._snackBar.openFromComponent(SuccessToasterComponent, {
                 duration: this.durationInSeconds * 1000,
                 panelClass: ['green-snackbar'],
               });
             },
-            error: (err: any) => {
+            error: (err) => {
               console.log(err);
             },
           });
       } else {
         this.service.addProduct(this.productForm.value).subscribe({
-          next: (val: any) => {
+          next: (val) => {
             this._snackBar.openFromComponent(SuccessToasterComponent, {
               duration: this.durationInSeconds * 1000,
               panelClass: ['green-snackbar'],
             });
           },
-          error: (err: any) => {
+          error: (err) => {
             console.error(err);
           },
         });

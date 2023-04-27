@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IProduct } from '../models/product.model';
+import { ProductService } from '../shared/product-service/product.service';
+import { CartService } from '../shared/cart-service/cart.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,19 +9,11 @@ import { IProduct } from '../models/product.model';
   styleUrls: ['./shopping-cart.component.scss']
 })
 export class ShoppingCartComponent {
-products: IProduct[] =[
-  {
-    "id": 8,
-    "title": "Web Camera",
-    "price": "59.99",
-    "short_description": " Stay connected with this high-quality web camera. ",
-    "long_description": "This web camera is perfect for video conferencing, streaming, and more. With high-quality video and audio, you can stay connected with friends, family, and colleagues from anywhere.",
-    "year": 2022,
-    "RAM": "N/A",
-    "warranty_period": "1 year",
-    "imgUrl": "./assets/images/webcam.png",
-  }
-]
+items = this.cartService.getItems();
 
 title = "Shopping Cart"
+
+constructor(
+  public cartService: CartService
+){}
 }

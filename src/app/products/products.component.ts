@@ -7,6 +7,7 @@ import { AddNewProductDialogComponent } from '../add-new-product-dialog/add-new-
 import { registerLocaleData } from '@angular/common';
 import localFr from '@angular/common/locales/fr';
 import { Router } from '@angular/router';
+import { CartService } from '../shared/cart-service/cart.service';
 
 registerLocaleData(localFr, 'fr');
 
@@ -18,11 +19,14 @@ registerLocaleData(localFr, 'fr');
 })
 export class ProductsComponent implements OnInit, OnDestroy {
   products: IProduct[] = [];
+  product!: IProduct;
   sub!: Subscription;
+
   constructor(
     private productsService: ProductService,
     private dialog: MatDialog,
-    public router: Router
+    public router: Router,
+    public cartService: CartService
   ) {}
 
   openDialog() {
@@ -34,8 +38,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
   goToDetails() {
     this.router.navigateByUrl('/products/:id');
   }
-  addToCard() {
-    console.log('added to cart');
+  addToCard(data: IProduct) {
+    this.cartService.addToCart(data);
+    alert('Product has been added')
+    console.log(data)
   }
   addNewProduct() {
     console.log('added new product');
@@ -50,7 +56,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
-  onEdit(data: any) {
+  onEdit(data: IProduct) {
     this.dialog.open(AddNewProductDialogComponent, {
       data,
     });
