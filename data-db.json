@@ -125,6 +125,28 @@
         "Adjustable clip",
         "Compatible with Windows and Mac"
       ]
+    },
+    {
+      "title": "Player",
+      "short_description": "super-smart",
+      "long_description": "superDruper-smart",
+      "price": "55555",
+      "year": "2",
+      "RAM": "22",
+      "warranty_period": "2",
+      "imgUrl": "./assets/images/tablet.png",
+      "id": 9
+    },
+    {
+      "title": "Player-Mayerrrr",
+      "short_description": "hhhjkkkksddddddd",
+      "long_description": "blabla bla",
+      "price": "1",
+      "year": "3",
+      "RAM": "55",
+      "warranty_period": "2",
+      "imgUrl": "./assets/images/tablet.png",
+      "id": 10
     }
   ]
 }

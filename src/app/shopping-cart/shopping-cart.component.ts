@@ -1,25 +1,52 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../models/product.model';
+import { CartService } from '../shared/cart-service/cart.service';
 
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
-  styleUrls: ['./shopping-cart.component.scss']
+  styleUrls: ['./shopping-cart.component.scss'],
 })
-export class ShoppingCartComponent {
-products: IProduct[] =[
-  {
-    "id": 8,
-    "title": "Web Camera",
-    "price": "59.99",
-    "short_description": " Stay connected with this high-quality web camera. ",
-    "long_description": "This web camera is perfect for video conferencing, streaming, and more. With high-quality video and audio, you can stay connected with friends, family, and colleagues from anywhere.",
-    "year": 2022,
-    "RAM": "N/A",
-    "warranty_period": "1 year",
-    "imgUrl": "./assets/images/webcam.png",
-  }
-]
+export class ShoppingCartComponent implements OnInit {
+  cartItems: IProduct[] = [];
+  //items = this.cartService.getItems();
+  totalPrice = 0;
+  // quantity = 1
 
-title = "Shopping Cart"
+  // productQuantity = 1
+
+  title = 'Shopping Cart';
+
+  constructor(public cartService: CartService) {}
+
+  ngOnInit() {
+    this.cartService.cartItems$.subscribe((items) => {
+      this.cartItems = items;
+      this.calculateTotalPrice();
+    });
+  }
+
+  decreaseQuantity(id: number) {
+    const item = this.cartItems.find((item) => item.id === id);
+    if (item && item.quantity > 1) {
+      this.cartService.updateQuantity(id, item.quantity - 1);
+    } else if (item && item.quantity < 1) {
+      this.cartService.removeFromCart(id);
+    }
+  }
+
+  increaseQuantity(id: number) {
+    const item = this.cartItems.find((item) => item.id === id);
+    if (item) {
+      this.cartService.updateQuantity(id, item.quantity + 1);
+    }
+  }
+
+  productPrice(items: IProduct) {
+    return items.price * items.quantity;
+  }
+
+  calculateTotalPrice() {
+    this.totalPrice = this.cartService.getTotalPrice();
+  }
 }

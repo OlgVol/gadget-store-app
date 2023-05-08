@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse
+} from '@angular/common/http';
 import { catchError, Observable, tap, throwError, map } from 'rxjs';
 import { IProduct } from 'src/app/models/product.model';
-
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
+  items: IProduct[] = [];
   public productUrl = 'http://localhost:3000/products';
 
   constructor(private http: HttpClient) {}
-
 
   getProducts(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(this.productUrl).pipe(
@@ -33,15 +35,15 @@ export class ProductService {
     }
     return throwError(() => errorMessage);
   }
-addProduct(product: IProduct) {
- return this.http.post<IProduct>(this.productUrl, product)
-}
+  addProduct(product: IProduct) {
+    return this.http.post<IProduct>(this.productUrl, product);
+  }
 
-deleteProduct(id: number): Observable<IProduct> {
-  return this.http.delete<IProduct>(`${this.productUrl}/${id}`)
-}
+  deleteProduct(id: number): Observable<IProduct> {
+    return this.http.delete<IProduct>(`${this.productUrl}/${id}`);
+  }
 
-updateProduct(id: number, product: IProduct): Observable<IProduct> {
-  return this.http.put<IProduct>(`${this.productUrl}/${id}`, product)
-}
+  updateProduct(id: number, product: IProduct): Observable<IProduct> {
+    return this.http.put<IProduct>(`${this.productUrl}/${id}`, product);
+  }
 }
